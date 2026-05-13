@@ -1,1 +1,1 @@
-# portofolio-pridadi
+# portofolio-pribadi
