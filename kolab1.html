@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daur Ulang Website</title>
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ======== HEADER & NAV ======== */
+header {
+  background: #4dd5f4;
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 99999;  
+}
+
+header h3 {
+  font-size: 22px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: .3s;
+}
+
+nav ul li a:hover {
+  color: #f0f0f0;
+  border-bottom: 2px solid #fff;
+}
+
+/* ======== HERO SECTION (PERBAIKAN BUG) ======== */
+.hero {
+  text-align: left;
+  padding: 80px 30px; /* Padding dikurangi agar tidak terpotong */
+  background:
+    linear-gradient(rgba(175, 217, 176, 0.8), rgba(116, 145, 224, 0.8)),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbO3o-ySPgYv2ZcK7CDr4cxFjtZZBKL7xnHCpjXM_Qz7l1O_YFZT-X1aUO&s=10") center/cover no-repeat;
+  color: #000;
+  position: relative;
+  height: 350px; /* Tinggi disesuaikan */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h2 {
+  font-size: 35px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.email-box {
+  display: flex;
+  gap: 6px;
+  margin-top: 15px;
+}
+
+.email-box input {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  width: 250px;
+}
+
+.email-box button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  background: #03a9f7;
+  color: white;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.email-box button:hover {
+  background: #2004f5;
+}
+
+/* Ilustrasi Hero untuk mendekati desain */
+.hero-illustration {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    width: 300px; 
+    height: 300px;
+    background: url("https://i.imgur.com/kS5Y2vX.png") center/contain no-repeat;
+}
+
+
+/* ======== PRODUK SECTION ======== */
+.produk-kami {
+  padding: 50px 30px;
+  text-align: center;
+}
+
+.produk-kami h2 {
+  font-size: 30px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.produk-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.produk-card {
+  background: #5abde3;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: .3s;
+  text-align: center;
+  overflow: hidden;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.produk-card:hover {
+  transform: translateY(-6px);
+}
+
+.produk-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.produk-card a {
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.produk-card a:hover {
+  color: #f0f0f0;
+}
+
+/* ======== ANALISIS SECTION ======== */
+.analisis {
+  padding: 50px 30px;
+  background: #d8f3dc;
+  text-align: center;
+}
+
+.analisis h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+.analisis-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.analisis-card {
+  background: #88c5f0;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: .3s;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.analisis-card:hover {
+  transform: scale(1.05);
+}
+
+.analisis-card img {
+  width: 90px;
+  border-radius: 10px;
+  height: 90px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.analisis-card a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+}
+
+/* ======== KONTAK ========== */
+.kontak {
+  padding: 50px 30px;
+  text-align: center;
+  background-color: #e3f2fd;
+}
+
+.kontak h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.kontak p {
+    margin-bottom: 30px;
+}
+
+.form-kontak {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  gap: 12px;
+}
+
+.form-kontak input,
+.form-kontak textarea {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.form-kontak button {
+  padding: 12px;
+  border: none;
+  background: #2abeeb;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-kontak button:hover {
+  background:#1a8bb2;
+}
+
+/* ======== ANGGOTA ======== */
+.anggota {
+    background-color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.anggota h2 {
+    color: #000;
+    padding: 10px 0;
+    border-radius: 0;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.Anggota-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.Anggota-card {
+    background-color: #fff;
+    width: 250px;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+.Anggota-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.Anggota-card h3 {
+    color: #000;
+    font-size: 1em;
+    line-height: 1.4;
+    font-weight: normal;
+}
+
+/* ======== FOOTER ======== */
+footer {
+  background: linear-gradient(90deg, #A8E6CF 0%, #AEC6F3 100%);
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 1200px) {
+    .produk-container, .analisis-container {
+        gap: 40px;
+    }
+}
+@media (max-width: 768px) {
+    .produk-container, .analisis-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    .produk-card {
+        height: 200px; /* Diperbaiki untuk mobile */
+    }
+    .produk-card img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 5px;
+    }
+    .analisis-card img {
+        width: 70px;
+        height: 70px;
+    }
+    .hero {
+        padding: 50px 20px;
+        height: auto;
+    }
+    .hero-illustration {
+        display: none;
+    }
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+  .produk-container, .analisis-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .email-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .email-box input, .email-box button {
+    width: 100%;
+    max-width: none;
+  }
+  .form-kontak {
+    width: 95%;
+  }
+  .Anggota-card {
+    width: 80%;
+  }
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <h3>🌐 Website Kami</h3>
+        <nav>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#produk-kami">Produk</a></li>
+                <li><a href="#analisis">Analisis</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+                <li><a href="#anggota">Anggota</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="beranda">
+        <h2>DAUR ULANG SAMPAH</h2>
+        <p>Dari sampah jadi indah, mari rawat bumi bersama.</p>
+        <p>Bunga dari botol bekas, bukti bahwa keindahan bisa diciptakan.</p>
+
+        <div class="email-box">
+            <input type="email" placeholder="Masukkan email Anda">
+            <button>Mulai</button>
+        </div>
+        <div class="hero-illustration"></div>
+    </section>
+
+    <section class="produk-kami" id="produk-kami">
+        <h2>Produk Kami</h2>
+
+        <div class="produk-container">
+
+            <div class="produk-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFHK8sDTpbKsiN-kf_0zL5vfMx_YpVz_pdtg&usqp=CAU" alt="daur ulang">
+                <a href="halaman2.html" target="_blank"><h3>Mendaur Ulang</h3></a>
+            </div>
+
+            <div class="produk-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmt31WTPIXT7qhre5sj8aYraYRPBDA7FDzKA&usqp=CAU" alt="vas botol plastik">
+                <a href="halaman7.html"><h3>Vas dari Botol Plastik</h3></a>
+            </div>
+
+            <div class="produk-card">
+                <img src="https://cdn.antaranews.com/cache/1200x800/2024/09/30/sampah-umm.jpg" alt="Meja ecobrik">
+                <a href="halaman3.html"><h3>Meja dari Ecobrik</h3></a>
+            </div>
+
+            <div class="produk-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC58Rx24d5xMoZAHqmeTobSww8p38yy79SYw&usqp=CAU" alt="payung sunlight">
+                <a href="halaman6.html"><h3>Payung dari Plastik Sunlight</h3></a>
+            </div>
+
+            <div class="produk-card">
+                <img src="C:\Users\Pak Juned\Downloads\bunga botol.jpg" alt="bunga bot=ol bekas">
+                <a href="halaman4.html"><h3>Bunga dari Botol Bekas</h3></a>
+            </div>
+
+            <div class="produk-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQyVcVzPTR9hhm3SFuhn4kYIsIE5K7Or4LiGgzmNkD-A&s=10" alt="Alasan memilih">
+                <a href="halaman5.html"><h3>Alasan Memilih Produk Tersebut</h3></a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="analisis" id="analisis">
+        <h2>Analisis</h2>
+
+        <div class="analisis-container">
+            <div class="analisis-card">
+                <img src="https://i.etsystatic.com/44476860/r/il/7420ef/6530001557/il_794xN.6530001557_2dlg.jpg" alt="Report teks">
+                <a href="report.html"><h3>Report Teks</h3></a>
+            </div>
+
+            <div class="analisis-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG3W1_1mA0O9rlhyYgj4NzGS_ZJ62NjouTbq2KB7-EPQ&s=10" alt="spltv">
+                <a href="spltv.html"><h3>SPLTV</h3></a>
+            </div>
+
+            <div class="analisis-card">
+                <img src="https://i.etsystatic.com/42992315/r/il/45a025/6251808935/il_794xN.6251808935_qfrs.jpg" alt="teks lho">
+                <a href="lho.html"><h3>Teks LHO</h3></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="kontak" id="kontak">
+        <h1>Kontak Kami</h1>
+        <p><b>Jika Anda memiliki pertanyaan, saran, atau ingin bekerja sama, silakan kirim melalui formulir berikut:</b></p>
+
+        <form class="form-kontak">
+            <input type="text" placeholder="Nama Lengkap" required>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="5" placeholder="Pesan Anda..." required></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+    </section>
+
+    <section class="anggota" id="anggota">
+    <h2>Anggota</h2>
+
+    <div class="Anggota-container">
+        
+        <div class="Anggota-card">
+            <img src="foto anggi.jpeg" alt="Foto Anggota">
+            <h3>Nama: Angginka Putri Ananda<br>Kelas: x pplg 1<br>Absen: 03</h3>
+        </div>
+
+        <div class="Anggota-card">
+            <img src="C:\Users\Pak Juned\Downloads\isna.jpg"alt="Foto Anggota">
+            <h3>Nama: Desya Isna Hartanti<br>Kelas: x pplg 1<br>Absen: 08</h3>
+        </div>
+
+        <div class="Anggota-card">
+            <img src="foto kiki.jpeg" alt="Foto Anggota">
+            <h3>Nama: Raditya Rizky Kurniawan<br>Kelas: x pplg 1<br>Absen: 26</h3>
+        </div>
+
+         </div>
+</section>
+
+    <footer>
+        <p>&copy; 2025 Website Daur Ulang | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

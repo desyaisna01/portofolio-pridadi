@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SABONE Coffee</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }body {
+  background: #f5eee7;
+  color: #2d1f18;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: #fff8f2;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #7a4a2d;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #3d2b1f;
+  font-size: 15px;
+}
+
+.hero {
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+  url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  color: white;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.hero-text p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  line-height: 1.7;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #9b6b43;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #6d4327;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 80px 8%;
+  align-items: center;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.about-text h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.menu {
+  padding: 60px 8%;
+}
+
+.menu h2 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 50px;
+}
+
+.menu-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.promo {
+  margin: 80px 8%;
+  background: #d7b79a;
+  padding: 50px;
+  border-radius: 25px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.promo img {
+  width: 300px;
+  border-radius: 20px;
+}
+
+footer {
+  background: #4b2e1f;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 40px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .promo {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+  </style>
+</head>
+<body>  <header>
+    <div class="logo">SABONE</div><nav>
+  <a href="#home">Home</a>
+  <a href="#menu">Menu</a>
+  <a href="#tentang">Tentang</a>
+  <a href="#promo">Promo</a>
+  <a href="#kontak">Kontak</a>
+</nav>
+
+  </header>  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Ngopi Santai Bikin Hari Lebih Berarti</h1>
+      <p>
+        Secangkir kopi hangat bisa jadi teman terbaik buat memulai aktivitas.
+        Dengan rasa yang pas dan aroma yang khas, kopi kami siap menemani harimu.
+      </p><a href="#menu" class="btn">Lihat Menu</a>
+</div>
+
+  </section>  <section class="about" id="tentang">
+    <div class="about-text">
+      <h2>Kopi yang Dibuat Dengan Sepenuh Hati</h2><p>
+    Kami percaya kalau kopi bukan cuma minuman, tapi juga bagian dari cerita sehari-hari.
+    Karena itu setiap menu dibuat dari biji kopi pilihan supaya rasanya tetap enak dan bikin nyaman.
+  </p>
+
+  <a href="#menu" class="btn">Coba Sekarang</a>
+</div>
+
+<img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=1000&auto=format&fit=crop" alt="kopi">
+
+  </section>  <section class="menu" id="menu">
+    <h2>Menu Kopi Pilihan</h2><div class="menu-box">
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=900&auto=format&fit=crop" alt="espresso">
+
+    <div class="card-content">
+      <h3>Espresso</h3>
+      <p>Rasa kopi yang kuat cocok buat nemenin pagi dan kerja.</p>
+      <a href="#" class="btn">Beli</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?q=80&w=900&auto=format&fit=crop" alt="latte">
+
+    <div class="card-content">
+      <h3>Latte</h3>
+      <p>Campuran susu dan kopi yang lembut dan manis.</p>
+      <a href="#" class="btn">Beli</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=900&auto=format&fit=crop" alt="cold brew">
+
+    <div class="card-content">
+      <h3>Cold Brew</h3>
+      <p>Minuman kopi dingin yang segar untuk cuaca panas.</p>
+      <a href="#" class="btn">Beli</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1521302080376-67f6cfc60b3f?q=80&w=900&auto=format&fit=crop" alt="cappuccino">
+
+    <div class="card-content">
+      <h3>Cappuccino</h3>
+      <p>Foam susu lembut dengan rasa kopi yang pas.</p>
+      <a href="#" class="btn">Beli</a>
+    </div>
+  </div>
+
+</div>
+
+  </section>  <section class="promo" id="promo">
+    <div>
+      <h2>Diskon Spesial Pagi</h2>
+      <p>
+        Datang sebelum jam 10 pagi dan nikmati promo menarik untuk semua menu kopi favorit.
+      </p>
+    </div><img src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?q=80&w=900&auto=format&fit=crop" alt="promo kopi">
+
+  </section>  <footer id="kontak">
+    <p>© 2026 SABONE Coffee - Dibuat untuk tugas PPLG</p>
+  </footer></body>
+</html>
